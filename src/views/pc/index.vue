@@ -1,10 +1,16 @@
 <script setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
+function toBoxShadow() {
+  router.push('/boxshadowpc');
+}
 
 </script>
 
 <template>
   <div class="homeBox">
     <span>Coming soon.....</span>
+    <el-button @click="toBoxShadow">boxShadow</el-button>
   </div>
 </template>
 
@@ -17,5 +23,6 @@
   align-items: center;
   justify-content: center;
   font-size: 68px;
+  color: #fff;
 }
 </style>
