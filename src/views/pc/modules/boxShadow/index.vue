@@ -67,7 +67,6 @@ function handleBoxShadow() {
       }
     })
   }
-  console.log('data: ', data);
   styleData.value.boxShadow = data
 }
 
