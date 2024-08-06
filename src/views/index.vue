@@ -26,9 +26,5 @@ if (isMobile()) {
 </template>
 
 <style scoped lang="scss">
-.homeBox {
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--bgColor);
-}
+
 </style>

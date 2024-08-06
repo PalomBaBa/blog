@@ -39,19 +39,17 @@ const changeTheme = () => {
 
 <style scoped lang="scss">
 .homeBox {
-  width: 100vw;
-  height: 100vh;
   background-color: black;
-  position: relative; 
+  position: relative;
 
-  .homeBox__nav{
+  .homeBox__nav {
     display: flex;
     justify-content: flex-end;
     padding: 10px;
   }
 
   .homeBox__content {
-    padding: 60px 90px;
+    padding: 60px 90px ;
 
     .homeBox__titleArea {
       .title {
@@ -82,7 +80,8 @@ const changeTheme = () => {
     bottom: 0;
     right: 0;
     left: 0;
-    height: 30px;
+    padding: 10px;
+    // height: 30px;
 
     .homeBox__footer__text a {
       text-decoration: none;
