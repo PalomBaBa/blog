@@ -1,10 +1,13 @@
 <script setup>
 import { ref, watch, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import CustomizeShadows from './components/CustomizeShadows.vue';
 import RenderArea from './components/RenderArea.vue';
 import BoxProperties from './components/BoxProperties.vue';
 import CopyDialog from './components/CopyDialog.vue';
 
+
+const router = useRouter();
 
 const copyDialogRef = ref(null);
 
@@ -30,10 +33,15 @@ const styleData = ref({
   ]
 })
 
+watch(() => styleData.value.shadows, () => {
+  handleBoxShadow()
+}, {
+  deep: true
+})
+
 function showCssCode() {
   console.log(styleData.value);
   copyDialogRef.value.open()
-
 }
 
 function handleBoxShadow() {
@@ -70,11 +78,9 @@ function handleBoxShadow() {
   styleData.value.boxShadow = data
 }
 
-watch(() => styleData.value.shadows, () => {
-  handleBoxShadow()
-}, {
-  deep: true
-})
+function backToHome(){
+  router.push('/')
+}
 
 onMounted(() => {
   handleBoxShadow()
@@ -86,14 +92,14 @@ onMounted(() => {
     <div class="boxShadow_box_header">
       <div class="boxShadow_box_hearer_title">
         <div class="boxShadow_box_hearer_title_returnIcon">
-          <el-icon>
+          <el-icon style="cursor: pointer;" @click="backToHome">
             <ArrowLeft />
           </el-icon>
         </div>
-        <span>Box Shadows</span>
+        <span>盒子阴影</span>
       </div>
       <div class="boxShadow_box_hearer_showCodeBtn">
-        <el-button type="primary" @click="showCssCode">Show code</el-button>
+        <el-button type="primary" @click="showCssCode">代码展示</el-button>
       </div>
     </div>
 

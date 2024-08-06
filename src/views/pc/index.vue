@@ -39,7 +39,7 @@ const changeTheme = () => {
 
 <style scoped lang="scss">
 .homeBox {
-  background-color: black;
+  background-color: var(--bgColor);
   position: relative;
 
   .homeBox__nav {
@@ -76,12 +76,7 @@ const changeTheme = () => {
 
 
   .homeBox__footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
     padding: 10px;
-    // height: 30px;
 
     .homeBox__footer__text a {
       text-decoration: none;

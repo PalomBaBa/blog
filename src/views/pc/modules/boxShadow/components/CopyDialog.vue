@@ -43,21 +43,21 @@ defineExpose({
   <div>
     <el-dialog align-center v-model="dialogVisible" width="600">
       <div class="copyDialogBox">
-        <div class="copyDialogBox_title">Generated Styles</div>
-        <div class="copyDialogBox_subTitle">This is the CSS needed to generate the box shadows you see in the app.</div>
+        <div class="copyDialogBox_title">样式生成</div>
+        <div class="copyDialogBox_subTitle">以下是能套用在你的元素的CSS盒子阴影代码.</div>
         <div class="copyDialogBox_content">
-          <div v-if="styleData.shadows.length === 0">Please apply at least one active shadow</div>
+          <div v-if="styleData.shadows.length === 0" style="font-weight: bold;">最少要有一个阴影,请返回添加</div>
           <div class="copyDialogBox_content_exist" v-else>
             <div class="copyDialogBox_content_data">
               <span style="color: #2563eb;">box-shadow:</span> {{ styleData.boxShadow }}
             </div>
             <div class="copyDialogBox_content_data_copy" @click="copyCss"><el-icon>
                 <DocumentCopy />
-              </el-icon>Copy</div>
+              </el-icon>复制</div>
           </div>
         </div>
         <div class="copyDialogBox_closeBtn">
-          <el-button type="primary" @click="close">Close</el-button>
+          <el-button type="primary" @click="close">关闭</el-button>
         </div>
       </div>
     </el-dialog>

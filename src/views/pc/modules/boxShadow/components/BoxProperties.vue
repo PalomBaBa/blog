@@ -7,11 +7,11 @@ const styleData = defineModel()
 
 <template>
   <div class="boxPropertiesBox">
-    <div class="boxPropertiesBox_title">Box Properties</div>
+    <div class="boxPropertiesBox_title">盒子属性</div>
     <div class="boxPropertiesBox_form">
       <div class="boxPropertiesBox_form_item">
         <div class="boxPropertiesBox_form_item_title">
-          Canvas color
+          画布背景颜色
         </div>
         <div class="boxPropertiesBox_form_item_input">
           <el-input v-model="styleData.canvasBgColor"></el-input>
@@ -19,7 +19,7 @@ const styleData = defineModel()
       </div>
       <div class="boxPropertiesBox_form_item">
         <div class="boxPropertiesBox_form_item_title">
-          Background color
+          盒子背景颜色
         </div>
         <div class="boxPropertiesBox_form_item_input">
           <el-input v-model="styleData.backgroundColor"></el-input>
@@ -27,7 +27,7 @@ const styleData = defineModel()
       </div>
       <div class="boxPropertiesBox_form_item">
         <div class="boxPropertiesBox_form_item_title">
-          Border color
+          边框颜色
         </div>
         <div class="boxPropertiesBox_form_item_input">
           <el-input v-model="styleData.borderColor"></el-input>
@@ -35,7 +35,7 @@ const styleData = defineModel()
       </div>
       <div class="boxPropertiesBox_form_item">
         <div class="boxPropertiesBox_form_item_title">
-          <span>Border radius</span>
+          <span>边框圆角半径</span>
           <div><el-input-number :max="20" :min="0" :controls="false" class="subInput"
               v-model="styleData.borderRadius" /><span>rem</span>
           </div>
@@ -46,7 +46,7 @@ const styleData = defineModel()
       </div>
       <div class="boxPropertiesBox_form_item">
         <div class="boxPropertiesBox_form_item_title">
-          <span>Height</span>
+          <span>高度</span>
           <div><el-input-number :max="40" :min="0" :controls="false" class="subInput"
               v-model="styleData.height" /><span>rem</span></div>
         </div>
@@ -56,7 +56,7 @@ const styleData = defineModel()
       </div>
       <div class="boxPropertiesBox_form_item">
         <div class="boxPropertiesBox_form_item_title">
-          <span>Width</span>
+          <span>宽度</span>
           <div><el-input-number :max="40" :min="0" :controls="false" class="subInput"
               v-model="styleData.width" /><span>rem</span>
           </div>

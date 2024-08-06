@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router';
+import { ref } from 'vue';
 
 
 const router = useRouter()
@@ -17,12 +18,24 @@ function toBoxShadow() {
       <el-row :gutter="20" style="width: 100%;">
         <el-col :span="6">
           <div class="toolBox__list__item" @click="toBoxShadow">
-            <div class="toolBox__list__item__boxShadowIcon"></div>
+            <div class="toolBox__list__item__boxShadowIcon">
+              
+            </div>
             <div class="toolBox__list__item__title">CSS盒子阴影</div>
+          </div>
+        </el-col>
+        <el-col :span="6" >
+          <div class="toolBox__list__item" >
+            <div class="toolBox__list__item__customPageIcon">
+              <i class="iconfont icon-yemian" style="color: var(--textColor);font-size: 40px;"></i>
+            </div>
+            <div class="toolBox__list__item__title">自定义页面</div>
+            <div class="toolBox__list__item__subTitle">coming soon...</div>
           </div>
         </el-col>
       </el-row>
     </div>
+
   </div>
 </template>
 
@@ -57,9 +70,19 @@ function toBoxShadow() {
       animation-iteration-count: infinite;
     }
 
+    .toolBox__list__item__customPageIcon{
+      width: 40px;
+      height: 40px;
+      margin-bottom: 16px;
+    }
+
     .toolBox__list__item__title {
       color: var(--textColor);
       font-size: 20px;
+    }
+
+    .toolBox__list__item__subTitle{
+      color: var(--textColor);
     }
   }
 
@@ -102,4 +125,5 @@ function toBoxShadow() {
   100% {
     box-shadow: 18px -20px 15px -3px var(--boxShadowColor);
   }
-}</style>
+}
+</style>

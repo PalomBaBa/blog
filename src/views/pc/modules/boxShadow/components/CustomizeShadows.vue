@@ -26,9 +26,7 @@ function removeShadow(index) {
 
 <template>
   <div class="customizeShadowsBox">
-    <div class="customizeShadowsBox_title"><span>Customize Shadows</span><el-button type="primary"
-        @click="addShadow">Add
-        Shadow</el-button></div>
+    <div class="customizeShadowsBox_title"><span>自定义阴影</span><el-button type="primary" @click="addShadow">添加阴影</el-button></div>
     <div class="customizeShadowsBox_shadowList">
       <el-collapse v-model="activeNames" v-if="styleData.shadows.length">
         <el-collapse-item :name="item.key" v-for="(item, index) in styleData.shadows" :key="item.key">
@@ -38,14 +36,14 @@ function removeShadow(index) {
           <div class="customizeShadowsBox_shadowForm">
             <div class="customizeShadowsBox_shadowForm_topItem">
               <div>
-                <el-checkbox v-model="item.active">Active</el-checkbox>
-                <el-checkbox v-model="item.inset">Inset</el-checkbox>
+                <el-checkbox v-model="item.active">激活</el-checkbox>
+                <el-checkbox v-model="item.inset">内阴影</el-checkbox>
               </div>
-              <div><el-button type="danger" @click="removeShadow(index)">Remove</el-button></div>
+              <div><el-button type="danger" @click="removeShadow(index)">移除</el-button></div>
             </div>
             <div class="customizeShadowsBox_shadowForm_item">
               <div class="customizeShadowsBox_shadowForm_item_title">
-                <span>Horizontal offset</span>
+                <span>水平偏移</span>
                 <div><el-input-number :max="100" :min="-100" :controls="false" class="subInput"
                     v-model="item.horizontalOffset" /><span>px</span>
                 </div>
@@ -56,7 +54,7 @@ function removeShadow(index) {
             </div>
             <div class="customizeShadowsBox_shadowForm_item">
               <div class="customizeShadowsBox_shadowForm_item_title">
-                <span>Vertical offset</span>
+                <span>垂直偏移</span>
                 <div><el-input-number :max="100" :min="-100" :controls="false" class="subInput"
                     v-model="item.verticalOffset" /><span>px</span>
                 </div>
@@ -67,7 +65,7 @@ function removeShadow(index) {
             </div>
             <div class="customizeShadowsBox_shadowForm_item">
               <div class="customizeShadowsBox_shadowForm_item_title">
-                <span>Blur radius</span>
+                <span>模糊半径</span>
                 <div><el-input-number :max="100" :min="0" :controls="false" class="subInput"
                     v-model="item.blurRadius" /><span>px</span>
                 </div>
@@ -78,7 +76,7 @@ function removeShadow(index) {
             </div>
             <div class="customizeShadowsBox_shadowForm_item">
               <div class="customizeShadowsBox_shadowForm_item_title">
-                <span>Spread radius
+                <span>扩散半径
                 </span>
                 <div><el-input-number :max="100" :min="-100" :controls="false" class="subInput"
                     v-model="item.spreadRaduis" /><span>px</span>
@@ -90,7 +88,7 @@ function removeShadow(index) {
             </div>
             <div class="customizeShadowsBox_shadowForm_item">
               <div class="customizeShadowsBox_shadowForm_item_title">
-                Color
+                颜色
               </div>
               <div class="customizeShadowsBox_shadowForm_item_input">
                 <el-input v-model="item.color"></el-input>
