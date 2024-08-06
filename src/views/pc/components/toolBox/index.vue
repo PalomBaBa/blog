@@ -28,13 +28,13 @@ function toBoxShadow() {
 
 <style scoped lang="scss">
 :deep(.el-divider__text) {
-  background: #000;
-  color: #c5c5c5;
+  background: var(--divideTextBgColor);
+  color: var(--divideTextColor);
   font-weight: normal;
 }
 
 :deep(.el-divider--horizontal) {
-  border-top: 1px solid #c5c5c5;
+  border-top: 1px solid var(--divideTextColor);
 }
 
 .toolBox__list {
@@ -50,7 +50,7 @@ function toBoxShadow() {
     .toolBox__list__item__boxShadowIcon {
       width: 40px;
       height: 40px;
-      background: #fff;
+      background: var(--textColor);
       margin-bottom: 16px;
       animation-name: boxShadow;
       animation-duration: 4s;
@@ -58,7 +58,7 @@ function toBoxShadow() {
     }
 
     .toolBox__list__item__title {
-      color: #fff;
+      color: var(--textColor);
       font-size: 20px;
     }
   }
@@ -72,35 +72,34 @@ function toBoxShadow() {
 
 @keyframes example {
   0% {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: var(--animationStartColor);
     box-shadow: none;
   }
 
   100% {
-    background-color: rgba(255, 255, 255, .1);
-    box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0.2);
+    background-color: var(--animationEndColor);
+    box-shadow: 0px 10px 15px -3px var(--boxShadowColor);
   }
 }
 
 @keyframes boxShadow {
   0% {
-    box-shadow: 18px -20px 15px -3px rgba(255, 255, 255, 0.3);
+    box-shadow: 18px -20px 15px -3px var(--boxShadowColor);
   }
 
   25% {
-    box-shadow: 18px 20px 15px -3px rgba(255, 255, 255, 0.3);
+    box-shadow: 18px 20px 15px -3px var(--boxShadowColor);
   }
 
   50% {
-    box-shadow: -18px 20px 15px -3px rgba(255, 255, 255, 0.3);
+    box-shadow: -18px 20px 15px -3px var(--boxShadowColor);
   }
 
   75% {
-    box-shadow: -18px -20px 15px -3px rgba(255, 255, 255, 0.3);
+    box-shadow: -18px -20px 15px -3px var(--boxShadowColor);
   }
 
   100% {
-    box-shadow: 18px -20px 15px -3px rgba(255, 255, 255, 0.2);
+    box-shadow: 18px -20px 15px -3px var(--boxShadowColor);
   }
-}
-</style>
+}</style>

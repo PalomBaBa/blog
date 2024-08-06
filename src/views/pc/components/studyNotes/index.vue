@@ -39,13 +39,13 @@ const studyNotesList = [
 
 <style scoped lang="scss">
 :deep(.el-divider__text) {
-  background: #000;
-  color: #c5c5c5;
+  background: var(--divideTextBgColor);
+  color: var(--divideTextColor);
   font-weight: normal;
 }
 
 :deep(.el-divider--horizontal) {
-  border-top: 1px solid #c5c5c5;
+  border-top: 1px solid var(--divideTextColor);
 }
 
 .studyNotesBox__list {
@@ -70,7 +70,7 @@ const studyNotesList = [
     }
 
     .studyNotesBox__list__item__title {
-      color: #fff;
+      color: var(--textColor);
       font-size: 20px;
     }
   }
@@ -84,13 +84,13 @@ const studyNotesList = [
 
 @keyframes example {
   0% {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: var(--animationStartColor);
     box-shadow: none;
   }
 
   100% {
-    background-color: rgba(255, 255, 255, .1);
-    box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0.2);
+    background-color: var(--animationEndColor);
+    box-shadow: 0px 10px 15px -3px var(--boxShadowColor);
   }
 }
 </style>

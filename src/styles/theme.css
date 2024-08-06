@@ -1,0 +1,19 @@
+html[data-theme="dark"] {
+  --bgColor: #000;
+  --textColor: #fff;
+  --boxShadowColor: rgba(255, 255, 255, .3);
+  --animationStartColor: rgba(255, 255, 255, 0);
+  --animationEndColor: rgba(255, 255, 255, .1);
+  --divideTextBgColor: #000;
+  --divideTextColor: #c5c5c5;
+}
+
+html[data-theme="light"] {
+  --bgColor: #fff;
+  --textColor: #000;
+  --boxShadowColor: rgba(0, 0, 0, .3);
+  --animationStartColor: rgba(0, 0, 0, 0);
+  --animationEndColor: rgba(0, 0, 0, .1);
+  --divideTextBgColor: #fff;
+  --divideTextColor: #c5c5c5;
+}
