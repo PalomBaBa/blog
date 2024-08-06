@@ -3,17 +3,17 @@
 const studyNotesList = [
   {
     title: 'JavaScript',
-    icon: '/src/views/pc/components/studyNotes/images/javascript.png',
+    icon: 'https://47.121.190.242:21633/down/QCTXvqrgfcg5.png',
     iconStyle:{width:'30px',height:'30px'}
   },
   {
     title: 'Vue',
-    icon: '/src/views/pc/components/studyNotes/images/vue.png',
+    icon: 'https://47.121.190.242:21633/down/8eDe2QsudQDc.png',
     iconStyle: { width: '30px', height: '28px' }
   },
   {
     title: 'React',
-    icon: '/src/views/pc/components/studyNotes/images/React.png',
+    icon: 'https://47.121.190.242:21633/down/M4OBpc4Dn56w.png',
     iconStyle: { width: '30px', height: '30px' }
   }
 ]
