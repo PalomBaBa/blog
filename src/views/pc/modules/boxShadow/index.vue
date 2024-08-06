@@ -84,7 +84,14 @@ onMounted(() => {
 <template>
   <div class="boxShadow_box">
     <div class="boxShadow_box_header">
-      <div class="boxShadow_box_hearer_title">Box Shadows</div>
+      <div class="boxShadow_box_hearer_title">
+        <div class="boxShadow_box_hearer_title_returnIcon">
+          <el-icon>
+            <ArrowLeft />
+          </el-icon>
+        </div>
+        <span>Box Shadows</span>
+      </div>
       <div class="boxShadow_box_hearer_showCodeBtn">
         <el-button type="primary" @click="showCssCode">Show code</el-button>
       </div>
@@ -125,8 +132,15 @@ onMounted(() => {
     padding: 0 30px;
 
     .boxShadow_box_hearer_title {
+      display: flex;
+      align-items: center;
       font-size: 20px;
       font-weight: bolder;
+      .boxShadow_box_hearer_title_returnIcon{
+        align-items: center;
+        display: flex;
+        margin-right: 10px;
+      }
     }
 
     .boxShadow_box_hearer_showCodeBtn {
