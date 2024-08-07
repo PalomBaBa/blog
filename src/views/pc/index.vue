@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import { Sunny, Moon } from '@element-plus/icons-vue'
 import studyNotes from './components/studyNotes/index.vue';
 import toolBox from './components/toolBox/index.vue';
 
@@ -39,6 +38,7 @@ const changeTheme = () => {
 
 <style scoped lang="scss">
 .homeBox {
+  min-height: 100vh;
   background-color: var(--bgColor);
   position: relative;
 
@@ -49,6 +49,7 @@ const changeTheme = () => {
   }
 
   .homeBox__content {
+    min-height: calc(100vh - 60px - 42px);
     padding: 60px 90px ;
 
     .homeBox__titleArea {

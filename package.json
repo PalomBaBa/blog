@@ -12,6 +12,7 @@
     "element-plus": "^2.7.8",
     "scss": "^0.2.4",
     "vue": "^3.4.29",
+    "vue-draggable-plus": "^0.5.3",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {

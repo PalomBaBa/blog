@@ -1,10 +1,12 @@
 <script setup>
 import { useRouter } from 'vue-router';
+import componetsList from './components/componentsList.vue'
+import renderPlus from './components/renderPlus.vue'
 
 
 const router = useRouter();
 
-function backToHome(){
+function backToHome() {
   router.push('/')
 }
 </script>
@@ -21,12 +23,22 @@ function backToHome(){
         <span>自定义页面</span>
       </div>
       <div class="customPageBox_showCodeBtn">
-        <el-button >预览</el-button>
+        <el-button>预览</el-button>
         <el-button type="primary">HTML代码</el-button>
       </div>
     </div>
-    <div class="customPageBox__content"></div>
-    <div class="customPageBox__footer"></div>
+    <div class="customPageBox__content">
+      <div class="customPageBox__content__componentList">
+        <componetsList />
+      </div>
+      <div class="customPageBox__content__renderArea">
+        <renderPlus />
+      </div>
+      <div class="customPageBox__content__attributeArea"></div>
+    </div>
+    <div class="customPageBox__footer">
+
+    </div>
   </div>
 </template>
 
@@ -58,6 +70,30 @@ function backToHome(){
         font-size: 16px;
       }
     }
+  }
+
+  .customPageBox__content {
+    display: flex;
+    height: calc(100vh - 64px - 64px);
+
+    .customPageBox__content__componentList {
+      width: 320px;
+      border-right: 1px solid #b9b9b9;
+    }
+
+    .customPageBox__content__renderArea {
+      flex: 1;
+    }
+
+    .customPageBox__content__attributeArea {
+      width: 400px;
+      border-left: 1px solid #b9b9b9;
+    }
+  }
+
+  .customPageBox__footer {
+    height: 64px;
+    border-top: 1px solid #b9b9b9;
   }
 }
 </style>
