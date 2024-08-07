@@ -24,15 +24,7 @@ function toBoxShadow() {
             <div class="toolBox__list__item__title">CSS盒子阴影</div>
           </div>
         </el-col>
-        <el-col :span="6" >
-          <div class="toolBox__list__item" >
-            <div class="toolBox__list__item__customPageIcon">
-              <i class="iconfont icon-yemian" style="color: var(--textColor);font-size: 40px;"></i>
-            </div>
-            <div class="toolBox__list__item__title">自定义页面</div>
-            <div class="toolBox__list__item__subTitle">coming soon...</div>
-          </div>
-        </el-col>
+
       </el-row>
     </div>
 
